@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Garage</title>
+  <!-- CSS -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="custom-styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen active">
+    <div class="loading-content">
+      <div class="loading-text">
+        Opening The Garage<span class="ellipsis">
+          <span class="dot">.</span>
+          <span class="dot">.</span>
+          <span class="dot">.</span>
+        </span>
+      </div>
+      <div class="loading-bar-container">
+        <div class="loading-bar">
+          <div class="loading-fill"></div>
+        </div>
+        <div class="loading-percentage">0%</div>
+      </div>
+      <div class="car-wheel">
+        <div class="wheel">⚙️</div>
+      </div>
+      <button class="enter-button" id="enter-garage">Enter The Garage</button>
+    </div>
+  </div>
+
+  <!-- Main Website -->
+  <div id="main-site" class="main-site">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo"><img src="img/Mud.png" height="100rem" width="100rem"></div>
+        <h1 class="site-title">The Garage...</h1>
+        <div class="header-wheel">
+          <span class="wheel-icon"><img src="img/Tire.png" height="100rem" width="100rem"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#gallery" class="nav-link" data-page="gallery">Gallery</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Home Page -->
+      <section id="home" class="page active">
+        <!-- <div class="image-slider">
+          <div class="slider-container">
+            <div class="slide active"><img src="img/Slide1-.jpg">
+            </div>
+            <div class="slide"><img src="img/Slide1-.jpg">
+            </div>
+            <div class="slide"><img src="img/resized-slide-2.jpg">
+            </div>
+            <div class="slide"><img src="img/Slide-2.jpg">
+            </div>
+            <div class="slide"><img src="img/Slide-2.jpg">
+            </div>
+          </div>
+          <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+          </div>
+        </div> -->
+
+        <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": "true", "autoPlay": "true", "wrapAround": "true" }'>
+            <div class="carousel-cell"><img src="img/Slide1-.jpg"></div>
+            <div class="carousel-cell"><img src="img/Slide1-.jpg"></div>
+            <div class="carousel-cell"><img src="img/resized-slide-2.jpg"></div>
+        </div>
+
+
+        <div class="home-content">
+          <h2>Welcome to The Garage</h2>
+          <p>Where automotive passion meets craftsmanship. Explore our collection of classic and modern vehicles, each with its own story to tell.</p>
+        </div>
+      </section>
+
+      <!-- Gallery Page -->
+      <section id="gallery" class="page">
+        <h2 class="page-title">Gallery</h2>
+        <div class="masonry-grid">
+          <div class="masonry-item">
+            <img src="img/bird.jpg" alt="Classic Car 1" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/dragonfly.jpg" alt="Classic Car 2" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/drift-1.jpg" alt="Sports Car" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/drift-2.jpg" alt="Vintage Car" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/light-1.jpg" alt="Modern Car" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/light-2.jpg" alt="Racing Car" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/lizard.jpg" alt="Luxury Car" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/mug.jpg" alt="Classic Interior" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/rally-1.jpg" alt="Classic Interior" class="gallery-image">
+          </div>
+          <div class="masonry-item">
+            <img src="img/rally-2.jpg   " alt="Classic Interior" class="gallery-image">
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal -->
+      <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+          <span class="close-btn">&times;</span>
+          <img id="lightbox-image" src="" alt="">
+          <div class="lightbox-nav">
+            <button class="nav-btn prev-btn">❮</button>
+            <button class="nav-btn next-btn">❯</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Page -->
+      <section id="about" class="page">
+        <div class="horizontal-scroll-container">
+          <div class="horizontal-content">
+            <!-- Section 1: Who I Am -->
+            <div class="about-section section-1">
+              <h2>Who I Am</h2>
+              <div class="profile-section">
+                <img src="img/car.JPG" alt="Profile" class="profile-image">
+                <div class="profile-text">
+                  <p>I'm a passionate automotive enthusiast with over 15 years of experience in classic car restoration and modern vehicle modification. My journey began in my father's garage, where I learned the fundamentals of mechanical craftsmanship.</p>
+                  <p>Every vehicle that enters The Garage receives meticulous attention to detail, whether it's a complete restoration project or a simple maintenance service. I believe in preserving automotive history while embracing modern innovations.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 2: My Purpose -->
+            <div class="about-section section-2">
+              <h2>My Purpose</h2>
+              <div class="purpose-content">
+                <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Tools" class="scattered-image img-1">
+                <img src="https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Engine" class="scattered-image img-2">
+                <img src="https://images.pexels.com/photos/13065/pexels-photo-13065.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Garage" class="scattered-image img-3">
+                
+                <div class="purpose-text">
+                  <p>My mission is to bridge the gap between automotive heritage and contemporary innovation. Each project is approached with respect for the vehicle's original design while incorporating modern safety and performance enhancements where appropriate.</p>
+                  <p>The Garage serves as a sanctuary for automotive craftsmanship, where traditional techniques meet cutting-edge technology. I'm committed to educating the next generation of mechanics and preserving the art of hands-on automotive work.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section 3: Where I'm Headed -->
+            <div class="about-section section-3">
+              <h2>Where I'm Headed</h2>
+              <div class="future-content">
+                <p class="glitch-text">The future of The Garage lies in expanding our capabilities while maintaining our commitment to quality craftsmanship. We're investing in sustainable restoration practices and exploring electric vehicle conversions for classic cars, ensuring that automotive passion remains relevant for generations to come.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Page -->
+      <section id="contact" class="page">
+        <h2 class="page-title">Contact</h2>
+        <div class="contact-content">
+          <div class="contact-image">
+            <img src="img/core.jpg" alt="Garage atmosphere" class="contact-thumb">
+          </div>
+          <div class="contact-form-container">
+            <form class="contact-form">
+              <h3>Get In Touch</h3>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2024 TheGarage. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Loading screen functionality
+    let loadingProgress = 0;
+    const loadingFill = document.querySelector('.loading-fill');
+    const loadingPercentage = document.querySelector('.loading-percentage');
+    const enterButton = document.getElementById('enter-garage');
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainSite = document.getElementById('main-site');
+
+    // Simulate loading progress
+    const loadingInterval = setInterval(() => {
+      loadingProgress += Math.random() * 10;
+      if (loadingProgress >= 100) {
+        loadingProgress = 100;
+        clearInterval(loadingInterval);
+        setTimeout(() => {
+          enterButton.style.display = 'block';
+          enterButton.style.animation = 'fadeIn 0.5s ease-in-out';
+        }, 500);
+      }
+      
+      loadingFill.style.width = loadingProgress + '%';
+      loadingPercentage.textContent = Math.floor(loadingProgress) + '%';
+    }, 150);
+
+    // Enter garage button
+    enterButton.addEventListener('click', () => {
+      loadingScreen.classList.remove('active');
+      mainSite.classList.add('active');
+    });
+
+    // Navigation functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+    const pages = document.querySelectorAll('.page');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all nav links and pages
+        navLinks.forEach(nl => nl.classList.remove('active'));
+        pages.forEach(page => page.classList.remove('active'));
+        
+        // Add active class to clicked nav link
+        link.classList.add('active');
+        
+        // Show corresponding page
+        const targetPage = document.getElementById(link.dataset.page);
+        if (targetPage) {
+          targetPage.classList.add('active');
+        }
+      });
+    });
+
+    // Image slider functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dots .dot');
+    
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove('active'));
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    }
+    
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+    
+    // Auto-advance slides
+    setInterval(nextSlide, 4000);
+    
+    // Dot navigation
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+      });
+    });
+
+    // Lightbox functionality
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeBtn = document.querySelector('.close-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    
+    let currentImageIndex = 0;
+    const imageUrls = Array.from(galleryImages).map(img => img.src.replace('w=600', 'w=1200'));
+    
+    galleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        currentImageIndex = index;
+        lightboxImage.src = imageUrls[index];
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+    
+    prevBtn.addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex - 1 + imageUrls.length) % imageUrls.length;
+      lightboxImage.src = imageUrls[currentImageIndex];
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+      lightboxImage.src = imageUrls[currentImageIndex];
+    });
+
+    // Contact form
+    document.querySelector('.contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      const mailtoLink = `mailto:garage@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      window.location.href = mailtoLink;
+    });
+  </script>
+
+  <!-- JavaScript -->
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+</body>
+</html>

@@ -209,8 +209,8 @@
               <div class="profile-section">
                 <img src="img/who-i-am.jpeg" alt="Profile" class="profile-image">
                 <div class="profile-text">
-                  <p>I'm a passionate automotive enthusiast with over 15 years of experience in classic car restoration and modern vehicle modification. My journey began in my father's garage, where I learned the fundamentals of mechanical craftsmanship.</p>
-                  <p>Every vehicle that enters The Garage receives meticulous attention to detail, whether it's a complete restoration project or a simple maintenance service. I believe in preserving automotive history while embracing modern innovations.</p>
+                  <p>I'm a passionate...</p>
+                  <p>The Garage receives meticulous attention to detail.</p>
                 </div>
               </div>
             </div>
@@ -219,13 +219,13 @@
             <div class="about-section section-2">
               <h2>My Purpose</h2>
               <div class="purpose-content">
-                <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Tools" class="scattered-image img-1">
-                <img src="https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Engine" class="scattered-image img-2">
-                <img src="https://images.pexels.com/photos/13065/pexels-photo-13065.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Garage" class="scattered-image img-3">
+                <img src="" alt="" class="scattered-image img-1">
+                <img src="" alt="" class="scattered-image img-2">
+                <img src="" alt="" class="scattered-image img-3">
                 
                 <div class="purpose-text">
-                  <p>My mission is to bridge the gap between automotive heritage and contemporary innovation. Each project is approached with respect for the vehicle's original design while incorporating modern safety and performance enhancements where appropriate.</p>
-                  <p>The Garage serves as a sanctuary for automotive craftsmanship, where traditional techniques meet cutting-edge technology. I'm committed to educating the next generation of mechanics and preserving the art of hands-on automotive work.</p>
+                  <p>My mission is to...</p>
+                  <p>The Garage serves as a...</p>
                 </div>
               </div>
             </div>
@@ -234,7 +234,7 @@
             <div class="about-section section-3">
               <h2>Where I'm Headed</h2>
               <div class="future-content">
-                <p class="glitch-text">The future of The Garage lies in expanding our capabilities while maintaining our commitment to quality craftsmanship. We're investing in sustainable restoration practices and exploring electric vehicle conversions for classic cars, ensuring that automotive passion remains relevant for generations to come.</p>
+                <p class="glitch-text">The future of The Garage lies in...</p>
               </div>
             </div>
           </div>
@@ -249,26 +249,22 @@
             <img src="img/core.jpg" alt="Garage atmosphere" class="contact-thumb">
           </div>
           <div class="contact-form-container">
-            <form class="contact-form">
-              <h3>Get In Touch</h3>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Send Message</button>
+
+            <form name="contact" method="POST" data-netlify="true">
+              <p>
+                <label>Name: <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label>Message: <textarea name="message"></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
             </form>
+
           </div>
         </div>
       </section>

@@ -790,7 +790,7 @@
     }
     
     .masonry-grid {
-      columns: 2;
+      columns: 3;
     }
     
     .page-title {
@@ -857,9 +857,13 @@
     .loading-bar {
       width: 200px;
     }
+
+    .header-content {
+      
+    }
     
     .masonry-grid {
-      columns: 1;
+      columns: 3;
     }
     
     .nav-list {

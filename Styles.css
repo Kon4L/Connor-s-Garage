@@ -31,15 +31,18 @@
   
   /* Loading Screen Styles */
   .loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    /* position: fixed; */
+    /* top: 0;
+    left: 0; */
+    width: 600px;
     height: 100vh;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    /* min-width: 900px; */
+    /* background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20% auto;
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
@@ -52,6 +55,8 @@
   }
   
   .loading-content {
+    display: flex;
+    align-items: center;
     text-align: center;
     position: relative;
   }
@@ -59,7 +64,7 @@
   .loading-text {
     font-size: 2.5rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
     color: var(--text-color);
   }
   
@@ -94,7 +99,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
   
   .loading-bar {
@@ -123,9 +128,10 @@
   
   /* Car wheel animation */
   .car-wheel {
-    position: absolute;
-    bottom: -50px;
-    right: -50px;
+    position: relative;
+    margin-left: 2rem;
+    /* bottom: -50px;
+    right: -50px; */
   }
   
   .wheel {
@@ -856,10 +862,6 @@
   @media (max-width: 480px) {
     .loading-bar {
       width: 200px;
-    }
-
-    .header-content {
-      
     }
     
     .masonry-grid {
